@@ -9,7 +9,7 @@ class CabinetConstraints:
         self.shelfLayout = [["_" for x in range(self.width)] for y in range(self.numRows)]
 
     def getRequiredSequenceSize(self):
-        return self.numRows*self.numShelvesPerRow + 100
+        return self.numRows*self.numShelvesPerRow
 
     def clearLayout(self):
         self.shelfLayout = [["_" for x in range(self.width)] for y in range(self.numRows)]
@@ -29,7 +29,7 @@ class CabinetConstraints:
         for i in range(self.width):
             toRet += "_"
         toRet += " \n"
-        for i in range(self.numRows):
+        for i in range(self.numRows-1,0,-1):
             toRet += "|"
             for j in range(self.width):
                 toRet += self.shelfLayout[i][j]
