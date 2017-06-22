@@ -1,7 +1,7 @@
 from sequenceGenerator import sequenceGenerator
 class fibonacciGenerator(sequenceGenerator):
     def __init__(self,numElems):
-        super.__init__(numElems)
+        sequenceGenerator.__init__(self,numElems)
         self.fibSequence = []
 
     def getSequence(self):
@@ -11,5 +11,5 @@ class fibonacciGenerator(sequenceGenerator):
         self.fibSequence.extend((0,1))
         for i in range(len(self.fibSequence),self.numElems):
             self.fibSequence.append(self.fibSequence[i-2]+self.fibSequence[i-1])
-            
+
         return self.fibSequence
