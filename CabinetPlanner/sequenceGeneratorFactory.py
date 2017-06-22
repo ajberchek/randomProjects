@@ -5,6 +5,6 @@ class sequenceGeneratorFactory:
     def __init__(self, numElems):
         self.numElems = numElems
 
-    def createSequenceGenerator(self,type):
-        if(type == "FIBONACCI"):
+    def createSequenceGenerator(self,sequenceType):
+        if(sequenceType == "FIBONACCI"):
             return fibonacciGenerator(self.numElems)
