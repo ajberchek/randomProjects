@@ -1,4 +1,5 @@
 from sequenceGenerator import sequenceGenerator
+
 class fibonacciGenerator(sequenceGenerator):
     def __init__(self,numElems):
         sequenceGenerator.__init__(self,numElems)

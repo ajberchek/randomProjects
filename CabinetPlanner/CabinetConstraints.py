@@ -1,4 +1,3 @@
-import sys
 class CabinetConstraints:
     def __init__(self, width, height, rowHeight, numShelvesPerRow):
         self.width = width
@@ -15,7 +14,6 @@ class CabinetConstraints:
         self.shelfLayout = [["_" for x in range(self.width)] for y in range(self.numRows)]
 
     def layoutShelves(self,sequence):
-        print(len(sequence))
         lastShelfPos = 0
         for i in range(self.numRows):
             for j in range(self.numShelvesPerRow):
@@ -29,7 +27,7 @@ class CabinetConstraints:
         for i in range(self.width):
             toRet += "_"
         toRet += " \n"
-        for i in range(self.numRows-1,0,-1):
+        for i in range(self.numRows-1,-1,-1):
             toRet += "|"
             for j in range(self.width):
                 toRet += self.shelfLayout[i][j]
